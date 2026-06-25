@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>Create Account</h1>
+    <p>Join ABC Telecom today</p>
+</section>
+
+<section class="contact-form">
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="fullname"
+            placeholder="Full Name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+        >
+
+        <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <input
+            type="password"
+            name="confirm_password"
+            placeholder="Confirm Password"
+            required
+        >
+
+        <button type="submit" class="btn">
+            Register
+        </button>
+
+    </form>
+
+</section>
+
+{% endblock %}

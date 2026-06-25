@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>Customer Support</h1>
+    <p>We are here to help you 24/7</p>
+</section>
+
+<section class="support-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="card">
+        <h3>How do I recharge my data?</h3>
+        <p>You can recharge via our website or mobile app.</p>
+    </div>
+
+    <div class="card">
+        <h3>Why is my internet slow?</h3>
+        <p>Check your plan or contact support for assistance.</p>
+    </div>
+
+    <div class="card">
+        <h3>How do I contact support?</h3>
+        <p>Use the form below or call our hotline.</p>
+    </div>
+
+</section>
+
+<!-- SUPPORT FORM -->
+<section class="contact-form">
+
+    <h2>Submit a Ticket</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Describe your issue" required></textarea>
+        <button class="btn" type="submit">Send Ticket</button>
+    </form>
+
+</section>
+
+{% endblock %}
