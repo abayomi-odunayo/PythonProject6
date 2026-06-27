@@ -1,0 +1,187 @@
+﻿Diagnose log at 2026-06-25T20:06:32Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.5.0+d34930736e131ad80e5690e5634ced1808aff3e2
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26100)
+Reading environment variables... OK
+ Variables:
+PROCESSOR_ARCHITEW6432=AMD64
+DriverData=C:\Windows\System32\Drivers\DriverData
+TERMINAL_EMULATOR=JetBrains-JediTerm
+GIT_TRACE2_PARENT_SID=4c187558-7cb9-4abf-be23-6ee8e0729c49
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\Administrator\OneDrive
+EFC_980_3789132940=1
+SESSIONNAME=Console
+EFC_980_2775293581=1
+TMP=C:\Users\ADMINI~1\AppData\Local\Temp
+HOME=C:\Users\Administrator
+PROCESSOR_REVISION=9a04
+PROCESSOR_ARCHITECTURE=x86
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+HOMEPATH=\Users\Administrator
+EFC_980_1262719628=1
+SystemDrive=C:
+VIRTUAL_ENV_PROMPT=.venv
+TEMP=C:\Users\ADMINI~1\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\Administrator\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
+COMPUTERNAME=DESKTOP-JMR591K
+ProgramW6432=C:\Program Files
+USERDOMAIN=DESKTOP-JMR591K
+ProgramFiles(x86)=C:\Program Files (x86)
+JETBRAINS_INTELLIJ_COMMAND_END_MARKER=fHHcFYqBJqPHuNlsxDdtxOyZmJi49Xex48lGMeGCfDkmRQ6xFTIyzyetpM2j474X
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=8
+TMPDIR=C:\Users\ADMINI~1\AppData\Local\Temp
+PSModulePath=C:\Users\Administrator\OneDrive\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+EFC_980_2283032206=1
+VIRTUAL_ENV=C:\Users\Administrator\PycharmProjects\PythonProject6\.venv
+USERPROFILE=C:\Users\Administrator
+PLINK_PROTOCOL=ssh
+COLORTERM=truecolor
+MSYS=disable_pcon
+EFC_980_1592913036=1
+ProgramFiles=C:\Program Files (x86)
+SystemRoot=C:\WINDOWS
+TERM_SESSION_ID=13643a16-fb4f-499f-9bae-15b35c6ef9cf
+LC_CTYPE=C.UTF-8
+CommonProgramW6432=C:\Program Files\Common Files
+ZES_ENABLE_SYSMAN=1
+LOGONSERVER=\\DESKTOP-JMR591K
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+ProgramData=C:\ProgramData
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-JMR591K
+APPDATA=C:\Users\Administrator\AppData\Roaming
+HOMEDRIVE=C:
+USERNAME=Administrator
+PSExecutionPolicyPreference=Bypass
+OS=Windows_NT
+ComSpec=C:\WINDOWS\system32\cmd.exe
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Administrator\bin;C:\Users\Administrator\PycharmProjects\PythonProject6\.venv/Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python313\;C:\Users\Administrator\AppData\Local\Programs\Python\Launcher\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\Users\Administrator\AppData\Local\JetBrains\Toolbox\scripts;c:\mingw64\bin;
+windir=C:\WINDOWS
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\Administrator\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\Administrator\AppData\Local\Temp\e8fe40d88943a65dcd0aeae5'... OK
+Reading from temporary file 'C:\Users\Administrator\AppData\Local\Temp\e8fe40d88943a65dcd0aeae5'... OK
+Deleting temporary file 'C:\Users\Administrator\AppData\Local\Temp\e8fe40d88943a65dcd0aeae5'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\Administrator
+UserDataDirectoryPath: C:\Users\Administrator\.gcm
+GetCurrentDirectory(): C:\Users\Administrator\PycharmProjects\PythonProject6
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:54947/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.45.1.windows.1'
+Locating current repository...Git repository at 'C:/Users/Administrator/PycharmProjects/PythonProject6/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/Administrator/.gitconfig	user.name=abayomiodunayo
+file:C:/Users/Administrator/.gitconfig	user.email=abayomiodunayo0@gmail.com
+file:C:/Users/Administrator/.gitconfig	credential.helper=manager
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/abayomiodunayo/PythonProject6.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\Administrator\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\Administrator\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
