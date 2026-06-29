@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 app.secret_key = "abc_telecom_secure_2026_secret_key_12345"
 
-DATABASE = "abc_telecom.db"
-
+DATABASE = "/home/abayomiodunayo6/PythonProject6/abc_telecom.db"
 
 # ==========================
 # DATABASE CONNECTION
