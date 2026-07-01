@@ -36,6 +36,7 @@ body {
 }
 
 .nav-links {
+
     list-style: none;
     display: flex;
     gap: 20px;

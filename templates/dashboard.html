@@ -3,33 +3,62 @@
 {% block content %}
 
 <section class="page-header">
-    <h1>Customer Dashboard</h1>
+    <h1>ABC Telecom Dashboard</h1>
+    <p>Welcome back, {{ fullname }}</p>
 </section>
 
 <section class="services">
 
-    <h2>Welcome, {{ fullname }}</h2>
-
     <div class="service-grid">
 
         <div class="card">
-            <h3>Current Plan</h3>
-            <p>Premium Package</p>
+    <h3>💰 Wallet Balance</h3>
+    <h2>₦{{ balance }}</h2>
+    <a href="{{ url_for('wallet') }}" class="btn">
+        Open Wallet
+    </a>
+</div>
+
+        <div class="card">
+            <h3>📱 Buy Airtime</h3>
+            <p>Recharge any mobile network.</p>
+            <a href="{{ url_for('airtime') }}" class="btn">Buy Airtime</a>
         </div>
 
         <div class="card">
-            <h3>Data Balance</h3>
-            <p>50 GB Remaining</p>
+            <h3>🌐 Buy Data</h3>
+            <p>Purchase affordable data bundles.</p>
+            <a href="{{ url_for('data') }}" class="btn">Buy Data</a>
         </div>
 
         <div class="card">
-            <h3>Account Status</h3>
-            <p>Active</p>
+            <h3>💡 Pay Bills</h3>
+            <p>Electricity, TV and more.</p>
+            <a href="{{ url_for('bills') }}" class="btn">Pay Bills</a>
         </div>
 
         <div class="card">
-            <h3>Support</h3>
-            <p>Available 24/7</p>
+            <h3>📜 Transactions</h3>
+            <p>View your transaction history.</p>
+            <a href="{{ url_for('transactions') }}" class="btn">View History</a>
+        </div>
+
+        <div class="card">
+            <h3>👤 My Profile</h3>
+            <p>Update your personal details.</p>
+            <a href="{{ url_for('profile') }}" class="btn">Profile</a>
+        </div>
+
+        <div class="card">
+            <h3>🆔 NIN Services</h3>
+            <p>Register or manage your NIN.</p>
+            <a href="{{ url_for('nin') }}" class="btn">Manage NIN</a>
+        </div>
+
+        <div class="card">
+            <h3>🚪 Logout</h3>
+            <p>Securely sign out of your account.</p>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
         </div>
 
     </div>

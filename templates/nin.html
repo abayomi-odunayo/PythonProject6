@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>NIN Registration</h1>
+
+{% if nin %}
+
+<h3>Your NIN Information</h3>
+
+<p><strong>NIN:</strong> {{ nin["nin"] }}</p>
+<p><strong>Status:</strong> {{ nin["status"] }}</p>
+
+{% else %}
+
+<form method="POST">
+
+    <label>National Identification Number (NIN)</label><br>
+    <input type="text"
+           name="nin"
+           maxlength="11"
+           minlength="11"
+           required>
+
+    <br><br>
+
+    <button type="submit">Register NIN</button>
+
+</form>
+
+{% endif %}
+
+<br>
+
+<a href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+{% endblock %}

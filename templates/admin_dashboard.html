@@ -1,10 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>ABC Telecom Admin Dashboard</h1>
+    <p>Administrator Control Panel</p>
+</section>
+
+<section class="services">
+
+<div class="service-grid">
+
+<div class="card">
+<h3>👥 Total Users</h3>
+<h2>{{ total_users }}</h2>
+</div>
+
+<div class="card">
+<h3>📱 Airtime Sales</h3>
+<h2>{{ airtime_count }}</h2>
+</div>
+
+<div class="card">
+<h3>🌐 Data Sales</h3>
+<h2>{{ data_count }}</h2>
+</div>
+
+<div class="card">
+<h3>💡 Bill Payments</h3>
+<h2>{{ bill_count }}</h2>
+</div>
+
+<div class="card">
+<h3>👤 Customers</h3>
+<p>Manage registered customers</p>
+<a href="{{ url_for('admin_users') }}" class="btn">View Customers</a>
+</div>
+
+<div class="card">
+<h3>🚪Logout</h3>
+<p>Sign out of the admin panel</p>
+<a href="{{ url_for('logout') }}" class="btn">Logout</a>
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -72,6 +72,36 @@
 
 <!-- JS -->
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<nav>
 
+    <a href="{{ url_for('home') }}">Home</a>
+
+    {% if session.get("user_id") %}
+
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('wallet') }}">Wallet</a>
+        <a href="{{ url_for('transactions') }}">Transactions</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+
+    {% elif session.get("admin") %}
+
+        <a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a>
+        <a href="{{ url_for('admin_users') }}">Customers</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+
+    {% else %}
+
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+
+    {% endif %}
+
+</nav>
+
+<footer class="footer">
+    <p>&copy; 2026 ABC Telecom. All Rights Reserved.</p>
+    <p>Built with Python, Flask, HTML, CSS, JavaScript & SQLite</p>
+</footer>
 </body>
 </html>

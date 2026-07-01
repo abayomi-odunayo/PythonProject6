@@ -1,10 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Customer Details</h1>
+
+<h3>{{ user["fullname"] }}</h3>
+
+<p><strong>Email:</strong> {{ user["email"] }}</p>
+<p><strong>Phone:</strong> {{ user["phone"] }}</p>
+
+<hr>
+
+<h2>Wallet</h2>
+
+<p>Balance:
+<strong>₦{{ wallet["balance"] if wallet else 0 }}</strong>
+</p>
+
+<hr>
+
+<h2>NIN</h2>
+
+{% if nin %}
+
+<p>{{ nin["nin"] }}</p>
+
+<p>Status:
+<strong>{{ nin["status"] }}</strong>
+</p>
+
+{% else %}
+
+<p>No NIN Registered</p>
+
+{% endif %}
+
+<hr>
+
+<a href="{{ url_for('admin_users') }}">
+Back to Customers
+</a>
+
+<hr>
+
+<h2>Airtime Transactions</h2>
+
+{% if airtime %}
+<table border="1" cellpadding="8">
+<tr>
+    <th>Network</th>
+    <th>Phone</th>
+    <th>Amount</th>
+</tr>
+
+{% for item in airtime %}
+<tr>
+    <td>{{ item["network"] }}</td>
+    <td>{{ item["phone"] }}</td>
+    <td>₦{{ item["amount"] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+{% else %}
+<p>No airtime transactions.</p>
+{% endif %}
+
+<hr>
+
+<h2>Data Transactions</h2>
+
+{% if data %}
+<table border="1" cellpadding="8">
+<tr>
+    <th>Network</th>
+    <th>Plan</th>
+    <th>Amount</th>
+</tr>
+
+{% for item in data %}
+<tr>
+    <td>{{ item["network"] }}</td>
+    <td>{{ item["data_plan"] }}</td>
+    <td>₦{{ item["amount"] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+{% else %}
+<p>No data transactions.</p>
+{% endif %}
+
+<hr>
+
+<h2>Bill Payments</h2>
+
+{% if bills %}
+<table border="1" cellpadding="8">
+<tr>
+    <th>Bill Type</th>
+    <th>Provider</th>
+    <th>Amount</th>
+</tr>
+
+{% for item in bills %}
+<tr>
+    <td>{{ item["bill_type"] }}</td>
+    <td>{{ item["provider"] }}</td>
+    <td>₦{{ item["amount"] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+{% else %}
+<p>No bill payment transactions.</p>
+{% endif %}
+
+{% endblock %}

@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Pay Bills</h1>
+
+<form method="POST">
+
+    <label>Bill Type</label><br>
+    <select name="bill_type">
+        <option>Electricity</option>
+        <option>Cable TV</option>
+        <option>Internet</option>
+    </select>
+
+    <br><br>
+
+    <label>Provider</label><br>
+    <select name="provider">
+        <option>IKEDC</option>
+        <option>EKEDC</option>
+        <option>DSTV</option>
+        <option>GOtv</option>
+        <option>StarTimes</option>
+        <option>Spectranet</option>
+    </select>
+
+    <br><br>
+
+    <label>Customer Number</label><br>
+    <input type="text" name="customer_number" required>
+
+    <br><br>
+
+    <label>Amount</label><br>
+    <input type="number" name="amount" required>
+
+    <br><br>
+
+    <button type="submit">Pay Bill</button>
+
+</form>
+
+<br>
+
+<a href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+{% endblock %}

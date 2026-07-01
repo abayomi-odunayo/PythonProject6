@@ -1,10 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Registered Customers</h1>
+
+<form method="GET">
+
+    <input
+        type="text"
+        name="search"
+        placeholder="Search by name, email or phone"
+        value="{{ search }}">
+
+    <button type="submit">Search</button>
+
+</form>
+
+<br>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>ID</th>
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+</tr>
+
+{% for user in users %}
+
+<tr>
+
+    <td>
+    <a href="{{ url_for('admin_customer', user_id=user['id']) }}">
+        View
+    </a>
+</td>
+    <td>{{ user["fullname"] }}</td>
+    <td>{{ user["email"] }}</td>
+    <td>{{ user["phone"] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="{{ url_for('admin_dashboard') }}">← Back to Dashboard</a>
+
+{% endblock %}

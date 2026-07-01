@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>Transaction History</h1>
+</section>
+
+<table border="1" cellpadding="10" cellspacing="0">
+
+    <tr>
+        <th>Date</th>
+        <th>Service</th>
+        <th>Network</th>
+        <th>Details</th>
+        <th>Amount</th>
+        <th>Status</th>
+    </tr>
+
+    {% for transaction in transactions %}
+
+    <tr>
+        <td>{{ transaction["transaction_date"] }}</td>
+        <td>{{ transaction["service"] }}</td>
+        <td>{{ transaction["network"] }}</td>
+        <td>{{ transaction["details"] }}</td>
+        <td>₦{{ transaction["amount"] }}</td>
+        <td>{{ transaction["status"] }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+{% endblock %}

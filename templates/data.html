@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Buy Data</h1>
+
+<form method="POST">
+
+    <label>Network</label><br>
+    <select name="network">
+        <option>MTN</option>
+        <option>Airtel</option>
+        <option>Glo</option>
+        <option>9mobile</option>
+    </select>
+
+    <br><br>
+
+    <label>Data Plan</label><br>
+    <select name="data_plan">
+        <option value="500MB">500 MB - ₦300</option>
+        <option value="1GB">1 GB - ₦500</option>
+        <option value="2GB">2 GB - ₦1000</option>
+        <option value="5GB">5 GB - ₦2500</option>
+        <option value="10GB">10 GB - ₦5000</option>
+    </select>
+
+    <br><br>
+
+    <label>Amount</label><br>
+    <input type="number" name="amount" required>
+
+    <br><br>
+
+    <button type="submit">Buy Data</button>
+
+</form>
+
+<br>
+
+<a href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+{% endblock %}
